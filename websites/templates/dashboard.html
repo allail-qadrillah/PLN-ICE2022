@@ -1,0 +1,423 @@
+{% extends 'template.html' %}
+
+{% block title %} Dashboard🌶️ {% endblock %}
+
+{% block body %}
+<div class="app-wrapper">
+
+  <div class="app-content pt-3 p-md-3 p-lg-4">
+
+    <h1 class="app-page-title">Overviews </h1>
+    <div class="container-xl">
+
+
+      <div class="container py-1 h-100">
+        <!-- block stok -->
+        <div class="row g-4 mb-4">
+
+          <div class="col-sm-4 col-md-4">
+            <div class="card  " style="border-radius: 25px;">
+              <div class="card-body p-4">
+                <div id="demo1" class="carousel slide" data-ride="carousel">
+                  <!-- Carousel inner -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="d-flex justify-content-between mb-4 pb-2">
+                        <div>
+                          <h5 class="text-muted mb-0">Cabai</h5>
+                          <h2 class="display-2"><strong>{{ data['gudang']['cabai'] }}kg</strong></h2>
+                        </div>
+
+                        <div class="fa-lg">
+                          <img src="{{ url_for('static', filename = 'images/icons/chili.png') }}" width="100px">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-4">
+            <div class="card" style="border-radius: 25px;">
+              <div class="card-body p-4">
+                <div id="demo1" class="carousel slide" data-ride="carousel">
+                  <!-- Carousel inner -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="d-flex justify-content-between mb-4 pb-2">
+                        <div>
+                          <h5 class="text-muted mb-0">Pupuk</h5>
+                          <h2 class="display-2"><strong>{{ data['gudang']['pupuk'] }}kg</strong></h2>
+                        </div>
+                        <div class="fa-lg">
+                          <img src="{{ url_for('static', filename = 'images/icons/fertilization.png') }}" width="100px">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-4">
+            <div class="card" style="border-radius: 25px;">
+              <div class="card-body p-4">
+                <div id="demo1" class="carousel slide" data-ride="carousel">
+                  <!-- Carousel inner -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="d-flex justify-content-between mb-4 pb-2">
+                        <div>
+                          <h5 class="text-muted mb-0">Bibit</h5>
+                          <h2 class="display-2"><strong>{{ data['gudang']['bibit'] }}kg</strong></h2>
+                        </div>
+                        <div>
+                          <img src="{{ url_for('static', filename = 'images/icons/seed.png') }}" width="100px">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <h1 class="app-page-title">Informasi Sistem</h1>
+    <div class="container-xl">
+      <div class="row g-4 mb-4">
+
+        <div class="col-sm-4 col-md-6">
+          <div class="card" style="border-radius: 50px;">
+            <div class="card-body p-4">
+              <div id="demo1" class="carousel slide" data-ride="carousel">
+                <!-- Carousel inner -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="d-flex justify-content-between mb-4 pb-2">
+                      <div>
+                        <h4 class="text-muted mb-0">Raspberry Server</h4>
+                        <h6 class="display-4" id="status-raspberry"><strong>loading...</strong></h6>
+                      </div>
+                      <div>
+                        <img src="{{ url_for('static', filename = 'images/icons/raspberry server.png') }}"
+                          width="100px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-md-6">
+          <div class="card " style="border-radius: 50px;">
+            <div class="card-body p-4">
+              <div id="demo1" class="carousel slide" data-ride="carousel">
+                <!-- Carousel inner -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="d-flex justify-content-between mb-4 pb-2">
+                      <div>
+                        <h4 class="text-muted mb-0">Tandon Air</h4>
+                        <h2 class="display-4" id="tandon-air"><strong>loading...</strong></h2>
+                      </div>
+                      <div>
+                        <img src="{{ url_for('static', filename = 'images/icons/tandon.png') }}" width="100px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-md-12">
+          <div class="card " style="border-radius: 50px;">
+            <div class="card-body p-4">
+              <div id="demo1" class="carousel slide" data-ride="carousel">
+                <!-- Carousel inner -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="d-flex justify-content-between mb-4 pb-2">
+                      <div>
+                        <h4 class="text-muted mb-0">Pompa</h4>
+                        <h2 class="display-4" id="status-pompa-lahan"><strong>loading...</strong></h2>
+                      </div>
+                      <div>
+                        <img src="{{ url_for('static', filename = 'images/icons/pompa.png') }}" width="150px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="card mb-4 gradient-custom" style="border-radius: 25px;">
+        <div class="card-body p-4">
+          <h1 class="app-page-title">Saklar Kran</h1>
+
+          <table class="table align-middle mb-2 bg-white">
+            <thead class="bg-light">
+              <tr>
+                <th>No</th>
+                <th>Kran</th>
+                <th>Status</th>
+
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody class="table-striped">
+              <tr>
+                <td>
+                  <h6>1</h5>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1">Kran 1</p>
+                </td>
+                <td>
+                  <span class="badge bg-info" id="status-kran-1">loading</span>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
+                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
+                </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>
+                  <h6>2</h5>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1">Kran 2</p>
+                </td>
+                <td>
+                  <span class="badge bg-info" id="status-kran-2">loading</span>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
+                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
+                </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>
+                  <h6>2</h5>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1">Kran 3</p>
+                </td>
+                <td>
+                  <span class="badge bg-info" id="status-kran-3">loading</span>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
+                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
+                </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>
+                  <h6>2</h5>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1">Kran 4</p>
+                </td>
+                <td>
+                  <span class="badge bg-info" id="status-kran-4">loading</span>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
+                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
+                </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>
+                  <h6>2</h5>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1">Kran 5</p>
+                </td>
+                <td>
+                  <span class="badge bg-info" id="status-kran-5">loading</span>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
+                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
+                </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>
+                  <h6>2</h5>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1">Kran 6</p>
+                </td>
+                <td>
+                <span class="badge bg-info" id="status-kran-6">loading</span>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
+                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+    </div>
+
+    <section class="vh-100">
+      <div class="container py-5">
+
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-md-9 col-lg-7 col-xl-5">
+
+            <div id="wrapper-bg" class="card text-white bg-image shadow-4-strong"
+              style="background-image: url('img/clouds.gif')">
+              <!-- Main current data -->
+              <div class="card-header p-4 border-0">
+                <div class="text-center mb-3">
+                  <p class="display-4 mb-1" id="wrapper-name"></p>
+                  <p class="mb-1" id="wrapper-description"></p>
+                  <p class="display-1 mb-1" id="wrapper-temp"></p>
+                  <span class="">Tekanan: <span id="wrapper-pressure"></span></span>
+                  <span class="mx-2">|</span>
+                  <span class="">Kelembaban: <span id="wrapper-humidity"></span></span>
+                </div>
+              </div>
+
+              <!-- Hourly forecast -->
+              <div class="card-body p-4 border-top border-bottom mb-2">
+                <div class="row text-center">
+                  <div class="col-2">
+                    <strong class="d-block mb-2" id="wrapper-time-now">Now</strong>
+                    <img id="wrapper-icon-hour-now" src="" class="" alt="" />
+                    <strong class="d-block" id="wrapper-hour-now"></strong>
+                  </div>
+
+                  <div class="col-2">
+                    <strong class="d-block mb-2" id="wrapper-time1"></strong>
+                    <img id="wrapper-icon-hour1" src="" class="" alt="" />
+                    <strong class="d-block" id="wrapper-hour1"></strong>
+                  </div>
+
+                  <div class="col-2">
+                    <strong class="d-block mb-2" id="wrapper-time2"></strong>
+                    <img id="wrapper-icon-hour2" src="" class="" alt="" />
+                    <strong class="d-block" id="wrapper-hour2"></strong>
+                  </div>
+
+                  <div class="col-2">
+                    <strong class="d-block mb-2" id="wrapper-time3"></strong>
+                    <img id="wrapper-icon-hour3" src="" class="" alt="" />
+                    <strong class="d-block" id="wrapper-hour3"></strong>
+                  </div>
+
+                  <div class="col-2">
+                    <strong class="d-block mb-2" id="wrapper-time4"></strong>
+                    <img id="wrapper-icon-hour4" src="" class="" alt="" />
+                    <strong class="d-block" id="wrapper-hour4"></strong>
+                  </div>
+
+                  <div class="col-2">
+                    <strong class="d-block mb-2" id="wrapper-time5"></strong>
+                    <img id="wrapper-icon-hour5" src="" class="" alt="" />
+                    <strong class="d-block" id="wrapper-hour5"></strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Daily forecast -->
+              <div class="card-body px-5">
+                <div class="row align-items-center">
+                  <div class="col-lg-6">
+                    <strong>Hari ini</strong>
+                  </div>
+
+                  <div class="col-lg-2 text-center">
+                    <img id="wrapper-icon-today" src="" class="w-100" alt="" />
+                  </div>
+
+                  <div class="col-lg-4 text-end">
+                    <span id="wrapper-forecast-temp-today"></span>
+                  </div>
+                </div>
+
+                <div class="row align-items-center">
+                  <div class="col-lg-6">
+                    <strong>Besok</strong>
+                  </div>
+
+                  <div class="col-lg-2 text-center">
+                    <img id="wrapper-icon-tomorrow" src="" class="w-100" alt="" />
+                  </div>
+
+                  <div class="col-lg-4 text-end">
+                    <span id="wrapper-forecast-temp-tomorrow">28</span>
+                  </div>
+                </div>
+
+                <div class="row align-items-center">
+                  <div class="col-lg-6">
+                    <strong>Lusa</strong>
+                  </div>
+
+                  <div class="col-lg-2 text-center">
+                    <img id="wrapper-icon-dAT" src="" class="w-100" alt="" />
+                  </div>
+
+                  <div class="col-lg-4 text-end">
+                    <span id="wrapper-forecast-temp-dAT">28</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <footer class="app-footer">
+      <div class="container text-center py-3">
+        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+        <small class="copyright">Made With <span class="sr-only">love</span><i class="fas fa-heart"
+            style="color: #fb866a;"></i> by <a class="app-link" href="http://themes.3rdwavemedia.com"
+            target="_blank">Chilee IoT Developers
+
+      </div>
+    </footer>
+    <!--//app-footer-->
+
+  </div>
+  <!--//app-wrapper-->
+
+  {% block script %}
+  <!-- realtime -->
+  <script type="module" src="{{ url_for('static', filename = 'js/realtime-status-dashboard.js') }}"></script>
+  {% endblock %}
+  {% endblock %}
