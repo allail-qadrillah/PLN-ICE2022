@@ -17,7 +17,7 @@ var barChartConfig = {
 	type: 'bar',
 
 	data: {
-		labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+		labels: ['Soil 1', 'Soil 2', 'Soil 3', 'Soil 4', 'Soil 5', 'Soil 6', 'Soil 7'],
 		datasets: [{
 			label: 'Orders',
 			backgroundColor: window.chartColors.green,

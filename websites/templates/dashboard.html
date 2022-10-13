@@ -165,7 +165,7 @@
 
 
       </div>
-      <div class="card mb-4 gradient-custom" style="border-radius: 25px;">
+      <div class="hidden-right card mb-4 gradient-custom" style="border-radius: 25px;">
         <div class="card-body p-4">
           <h1 class="app-page-title">Saklar Kran</h1>
 
@@ -263,7 +263,7 @@
     </div>
 
 
-    <div class="container py-5">
+    <div class="hidden-left container py-5">
 
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12">
@@ -393,5 +393,7 @@
 {% block script %}
 <!-- realtime -->
 <script type="module" src="{{ url_for('static', filename = 'js/realtime-status-dashboard.js') }}"></script>
+<!-- weather -->
+<script src="{{ url_for('static', filename = 'js/weather.js') }}"></script>
 {% endblock %}
 {% endblock %}

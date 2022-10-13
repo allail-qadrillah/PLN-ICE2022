@@ -13984,7 +13984,12 @@ button.close:focus {
   transition: all 1.5s;
   filter: blur(10px);
   transform: translate(-100%);
-  /* transform: translate(-100%); */
+}
+.hidden-right {
+  opacity: 0;
+  transition: all 1.5s;
+  filter: blur(10px);
+  transform: translate(100%);
 }
 
 .show {

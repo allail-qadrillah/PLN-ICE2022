@@ -12,3 +12,7 @@ def get_data_dashboard():
   ref = db.reference('/')
   return ref.get()
 
+# update data to realtime database
+def update_data(data):
+  ref = db.reference('/gudang')
+  ref.update(data)

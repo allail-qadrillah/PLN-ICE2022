@@ -132,12 +132,11 @@ var barChartConfig = {
   type: 'bar',
 
   data: {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    labels: ['Soil 1', 'Soil 2', 'Soil 3', 'Soil 4', 'Soil 5', 'Soil 6', 'Soil 7'],
     datasets: [{
-      label: 'Orders',
+      label: 'Tingkat Kelembaban💧',
       backgroundColor: window.chartColors.green,
       borderColor: window.chartColors.green,
-      borderWidth: 1,
       maxBarThickness: 16,
 
       data: [
@@ -160,7 +159,7 @@ var barChartConfig = {
     },
     title: {
       display: true,
-      text: 'Kelembaban Tanah Realtime'
+      text: 'Kelembaban Tanah🌱'
     },
     tooltips: {
       mode: 'index',
@@ -191,20 +190,12 @@ var barChartConfig = {
           drawBorder: false,
           color: window.chartColors.borders,
         },
-
-
       }]
     }
 
   }
 }
 
-
-
-
-
-
-
 // Generate charts on load
 window.addEventListener('load', function () {
 
@@ -216,30 +207,3 @@ window.addEventListener('load', function () {
 
 
 
-
-// Chart.js Bar Chart Example 
-var barChartConfig = {
-  type: 'bar',
-
-  data: {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    datasets: [{
-      // how to update this data on every change database 👇
-      data: [ // with data from soil sensor
-        23, // soil_1
-        45, // soil_2
-        76, // .....
-        75,
-        62,
-        37,
-        83
-      ]
-    }]
-  },
-
-}
-// Generate charts on load
-window.addEventListener('load', function () {
-  var barChart = document.getElementById('chart-bar').getContext('2d');
-  window.myBar = new Chart(barChart, barChartConfig);
-});
