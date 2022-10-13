@@ -39,3 +39,22 @@ onValue(ref(db, '/sensor/'), (snapshot) => {
   document.getElementById('tandon-air').innerHTML = `<strong>${tandon_air}</strong>`;
 });
 
+
+// Animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+    } else {
+      entry.target.classList.remove('show')      
+    }
+  })
+  
+})
+
+const hiddenElementsLeft = document.querySelectorAll('.hidden-left')
+const hiddenElementsDown = document.querySelectorAll('.hidden-down')
+
+hiddenElementsDown.forEach((el) => observer.observe(el))
+hiddenElementsLeft.forEach((el) => observer.observe(el))

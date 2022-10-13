@@ -15,7 +15,7 @@
         <!-- block stok -->
         <div class="row g-4 mb-4">
 
-          <div class="col-sm-4 col-md-4">
+          <div class="blok hidden-left col-sm-4 col-md-4">
             <div class="card  " style="border-radius: 25px;">
               <div class="card-body p-4">
                 <div id="demo1" class="carousel slide" data-ride="carousel">
@@ -39,7 +39,7 @@
             </div>
           </div>
 
-          <div class="col-sm-4 col-md-4">
+          <div class="blok hidden-left col-sm-4 col-md-4">
             <div class="card" style="border-radius: 25px;">
               <div class="card-body p-4">
                 <div id="demo1" class="carousel slide" data-ride="carousel">
@@ -62,7 +62,7 @@
             </div>
           </div>
 
-          <div class="col-sm-4 col-md-4">
+          <div class="blok hidden-left col-sm-4 col-md-4">
             <div class="card" style="border-radius: 25px;">
               <div class="card-body p-4">
                 <div id="demo1" class="carousel slide" data-ride="carousel">
@@ -93,7 +93,7 @@
     <div class="container-xl">
       <div class="row g-4 mb-4">
 
-        <div class="col-sm-4 col-md-6">
+        <div class="hidden-down col-sm-4 col-md-6">
           <div class="card" style="border-radius: 50px;">
             <div class="card-body p-4">
               <div id="demo1" class="carousel slide" data-ride="carousel">
@@ -117,7 +117,7 @@
           </div>
         </div>
 
-        <div class="col-sm-4 col-md-6">
+        <div class="hidden-down col-sm-4 col-md-6">
           <div class="card " style="border-radius: 50px;">
             <div class="card-body p-4">
               <div id="demo1" class="carousel slide" data-ride="carousel">
@@ -140,7 +140,7 @@
           </div>
         </div>
 
-        <div class="col-sm-4 col-md-12">
+        <div class="blok hidden-down col-sm-4 col-md-12">
           <div class="card " style="border-radius: 50px;">
             <div class="card-body p-4">
               <div id="demo1" class="carousel slide" data-ride="carousel">
@@ -175,8 +175,6 @@
                 <th>No</th>
                 <th>Kran</th>
                 <th>Status</th>
-
-                <th>Actions</th>
               </tr>
             </thead>
             <tbody class="table-striped">
@@ -189,10 +187,6 @@
                 </td>
                 <td>
                   <span class="badge bg-info" id="status-kran-1">loading</span>
-                </td>
-                <td>
-                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
-                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
                 </td>
               </tr>
             </tbody>
@@ -207,10 +201,6 @@
                 <td>
                   <span class="badge bg-info" id="status-kran-2">loading</span>
                 </td>
-                <td>
-                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
-                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
-                </td>
               </tr>
             </tbody>
             <tbody>
@@ -223,10 +213,6 @@
                 </td>
                 <td>
                   <span class="badge bg-info" id="status-kran-3">loading</span>
-                </td>
-                <td>
-                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
-                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
                 </td>
               </tr>
             </tbody>
@@ -241,10 +227,6 @@
                 <td>
                   <span class="badge bg-info" id="status-kran-4">loading</span>
                 </td>
-                <td>
-                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
-                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
-                </td>
               </tr>
             </tbody>
             <tbody>
@@ -258,10 +240,6 @@
                 <td>
                   <span class="badge bg-info" id="status-kran-5">loading</span>
                 </td>
-                <td>
-                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
-                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
-                </td>
               </tr>
             </tbody>
             <tbody>
@@ -273,11 +251,7 @@
                   <p class="fw-normal mb-1">Kran 6</p>
                 </td>
                 <td>
-                <span class="badge bg-info" id="status-kran-6">loading</span>
-                </td>
-                <td>
-                  <button type="button" class="btn btn-success mb-2">Hidupkan</button>
-                  <button type="button" class="btn btn-danger mb-2">Matikan</button>
+                  <span class="badge bg-info" id="status-kran-6">loading</span>
                 </td>
               </tr>
             </tbody>
@@ -288,118 +262,118 @@
 
     </div>
 
-    <section class="vh-100">
-      <div class="container py-5">
 
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-md-9 col-lg-7 col-xl-5">
+    <div class="container py-5">
 
-            <div id="wrapper-bg" class="card text-white bg-image shadow-4-strong"
-              style="background-image: url('img/clouds.gif')">
-              <!-- Main current data -->
-              <div class="card-header p-4 border-0">
-                <div class="text-center mb-3">
-                  <p class="display-4 mb-1" id="wrapper-name"></p>
-                  <p class="mb-1" id="wrapper-description"></p>
-                  <p class="display-1 mb-1" id="wrapper-temp"></p>
-                  <span class="">Tekanan: <span id="wrapper-pressure"></span></span>
-                  <span class="mx-2">|</span>
-                  <span class="">Kelembaban: <span id="wrapper-humidity"></span></span>
-                </div>
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12">
+
+          <div id="wrapper-bg" class="card text-white bg-image shadow-4-strong"
+            style="background-image: url('img/clouds.gif')">
+            <!-- Main current data -->
+            <div class="card-header p-4 border-0">
+              <div class="text-center mb-3">
+                <p class="display-4 mb-1" id="wrapper-name"></p>
+                <p class="mb-1" id="wrapper-description"></p>
+                <p class="display-1 mb-1" id="wrapper-temp"></p>
+                <span class="">Tekanan: <span id="wrapper-pressure"></span></span>
+                <span class="mx-2">|</span>
+                <span class="">Kelembaban: <span id="wrapper-humidity"></span></span>
               </div>
+            </div>
 
-              <!-- Hourly forecast -->
-              <div class="card-body p-4 border-top border-bottom mb-2">
-                <div class="row text-center">
-                  <div class="col-2">
-                    <strong class="d-block mb-2" id="wrapper-time-now">Now</strong>
-                    <img id="wrapper-icon-hour-now" src="" class="" alt="" />
-                    <strong class="d-block" id="wrapper-hour-now"></strong>
-                  </div>
-
-                  <div class="col-2">
-                    <strong class="d-block mb-2" id="wrapper-time1"></strong>
-                    <img id="wrapper-icon-hour1" src="" class="" alt="" />
-                    <strong class="d-block" id="wrapper-hour1"></strong>
-                  </div>
-
-                  <div class="col-2">
-                    <strong class="d-block mb-2" id="wrapper-time2"></strong>
-                    <img id="wrapper-icon-hour2" src="" class="" alt="" />
-                    <strong class="d-block" id="wrapper-hour2"></strong>
-                  </div>
-
-                  <div class="col-2">
-                    <strong class="d-block mb-2" id="wrapper-time3"></strong>
-                    <img id="wrapper-icon-hour3" src="" class="" alt="" />
-                    <strong class="d-block" id="wrapper-hour3"></strong>
-                  </div>
-
-                  <div class="col-2">
-                    <strong class="d-block mb-2" id="wrapper-time4"></strong>
-                    <img id="wrapper-icon-hour4" src="" class="" alt="" />
-                    <strong class="d-block" id="wrapper-hour4"></strong>
-                  </div>
-
-                  <div class="col-2">
-                    <strong class="d-block mb-2" id="wrapper-time5"></strong>
-                    <img id="wrapper-icon-hour5" src="" class="" alt="" />
-                    <strong class="d-block" id="wrapper-hour5"></strong>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Daily forecast -->
-              <div class="card-body px-5">
-                <div class="row align-items-center">
-                  <div class="col-lg-6">
-                    <strong>Hari ini</strong>
-                  </div>
-
-                  <div class="col-lg-2 text-center">
-                    <img id="wrapper-icon-today" src="" class="w-100" alt="" />
-                  </div>
-
-                  <div class="col-lg-4 text-end">
-                    <span id="wrapper-forecast-temp-today"></span>
-                  </div>
+            <!-- Hourly forecast -->
+            <div class="card-body p-4 border-top border-bottom mb-2">
+              <div class="row text-center">
+                <div class="col-2">
+                  <strong class="d-block mb-2" id="wrapper-time-now">Now</strong>
+                  <img id="wrapper-icon-hour-now" src="" class="" alt="" />
+                  <strong class="d-block" id="wrapper-hour-now"></strong>
                 </div>
 
-                <div class="row align-items-center">
-                  <div class="col-lg-6">
-                    <strong>Besok</strong>
-                  </div>
-
-                  <div class="col-lg-2 text-center">
-                    <img id="wrapper-icon-tomorrow" src="" class="w-100" alt="" />
-                  </div>
-
-                  <div class="col-lg-4 text-end">
-                    <span id="wrapper-forecast-temp-tomorrow">28</span>
-                  </div>
+                <div class="col-2">
+                  <strong class="d-block mb-2" id="wrapper-time1"></strong>
+                  <img id="wrapper-icon-hour1" src="" class="" alt="" />
+                  <strong class="d-block" id="wrapper-hour1"></strong>
                 </div>
 
-                <div class="row align-items-center">
-                  <div class="col-lg-6">
-                    <strong>Lusa</strong>
-                  </div>
+                <div class="col-2">
+                  <strong class="d-block mb-2" id="wrapper-time2"></strong>
+                  <img id="wrapper-icon-hour2" src="" class="" alt="" />
+                  <strong class="d-block" id="wrapper-hour2"></strong>
+                </div>
 
-                  <div class="col-lg-2 text-center">
-                    <img id="wrapper-icon-dAT" src="" class="w-100" alt="" />
-                  </div>
+                <div class="col-2">
+                  <strong class="d-block mb-2" id="wrapper-time3"></strong>
+                  <img id="wrapper-icon-hour3" src="" class="" alt="" />
+                  <strong class="d-block" id="wrapper-hour3"></strong>
+                </div>
 
-                  <div class="col-lg-4 text-end">
-                    <span id="wrapper-forecast-temp-dAT">28</span>
-                  </div>
+                <div class="col-2">
+                  <strong class="d-block mb-2" id="wrapper-time4"></strong>
+                  <img id="wrapper-icon-hour4" src="" class="" alt="" />
+                  <strong class="d-block" id="wrapper-hour4"></strong>
+                </div>
+
+                <div class="col-2">
+                  <strong class="d-block mb-2" id="wrapper-time5"></strong>
+                  <img id="wrapper-icon-hour5" src="" class="" alt="" />
+                  <strong class="d-block" id="wrapper-hour5"></strong>
                 </div>
               </div>
             </div>
 
-          </div>
-        </div>
+            <!-- Daily forecast -->
+            <div class="card-body px-5">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <strong>Hari ini</strong>
+                </div>
 
+                <div class="col-lg-2 text-center">
+                  <img id="wrapper-icon-today" src="" class="w-100" alt="" />
+                </div>
+
+                <div class="col-lg-4 text-end">
+                  <span id="wrapper-forecast-temp-today"></span>
+                </div>
+              </div>
+
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <strong>Besok</strong>
+                </div>
+
+                <div class="col-lg-2 text-center">
+                  <img id="wrapper-icon-tomorrow" src="" class="w-100" alt="" />
+                </div>
+
+                <div class="col-lg-4 text-end">
+                  <span id="wrapper-forecast-temp-tomorrow">28</span>
+                </div>
+              </div>
+
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <strong>Lusa</strong>
+                </div>
+
+                <div class="col-lg-2 text-center">
+                  <img id="wrapper-icon-dAT" src="" class="w-100" alt="" />
+                </div>
+
+                <div class="col-lg-4 text-end">
+                  <span id="wrapper-forecast-temp-dAT">28</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </section>
+
+    </div>
+
 
 
     <footer class="app-footer">
@@ -415,9 +389,9 @@
 
   </div>
   <!--//app-wrapper-->
-
-  {% block script %}
-  <!-- realtime -->
-  <script type="module" src="{{ url_for('static', filename = 'js/realtime-status-dashboard.js') }}"></script>
-  {% endblock %}
-  {% endblock %}
+</div>
+{% block script %}
+<!-- realtime -->
+<script type="module" src="{{ url_for('static', filename = 'js/realtime-status-dashboard.js') }}"></script>
+{% endblock %}
+{% endblock %}

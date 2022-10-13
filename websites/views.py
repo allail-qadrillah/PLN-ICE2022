@@ -7,6 +7,6 @@ views = Blueprint('views', __name__)
 def dashboard():  
     return render_template('dashboard.html', data = get_data_dashboard())
 
-@views.route('/monitoring')
-def monitoring():  
-    return render_template('monitoring.html')
+@views.route('/sistem')
+def sistem():  
+    return render_template('sistem.html')

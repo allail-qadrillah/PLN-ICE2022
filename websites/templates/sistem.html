@@ -1,0 +1,187 @@
+{% extends 'template.html' %}
+
+{% block title %}Monitoring{% endblock %}
+
+{% block body %}
+<div class="app-wrapper">
+
+  <div class="app-content pt-3 p-md-3 p-lg-4 ">
+    <div class="col-sm-12 col-md-12 mb-2">
+      <div class="card " style="border-radius: 50px;">
+        <div class="card-body p-4">
+          <div id="demo1" class="carousel slide" data-ride="carousel">
+            <!-- Carousel inner -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex justify-content-between mb-4 pb-2">
+                  <div>
+                    <h4 class="text-muted mb-0">Pompa</h4>
+                    <h2 class="display-4" id="status-pompa-lahan"><strong>loading</strong></h2>
+                    <button type="button" class="btn btn-info mt-2" id="status-pompa-lahan-button" onclick="updatePompa('pompa-lahan')"
+                      style="border-radius: 25px;">loading</button>
+                  </div>
+                  <div>
+                    <img src="{{ url_for('static', filename = 'images/icons/pompa.png') }}" width="150px">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-4 gradient-custom" style="border-radius: 25px;">
+      <div class="card-body p-4">
+        <h1 class="app-page-title">Saklar Kran</h1>
+
+        <table class="table align-middle mb-2 bg-white">
+          <thead class="bg-light">
+            <tr>
+              <th>#</th>
+              <th>Kran</th>
+              <th>Status</th>
+
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody class="table-striped">
+            <tr>
+              <td>
+                <h6>1</h5>
+              </td>
+              <td>
+                <p class="fw-normal mb-1">Kran 1</p>
+              </td>
+              <td>
+                <span class="badge bg-info" id="status-kran-1">loading</span>
+              </td>
+              <td>
+                <button type="button" class="btn btn-info mb-2" id="status-btn-kran-1" onclick="updateKeran('keran-1')" style="border-radius: 25px;">loading</button>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>
+                <h6>2</h5>
+              </td>
+              <td>
+                <p class="fw-normal mb-1">Kran 2</p>
+              </td>
+              <td>
+                <span class="badge bg-info" id="status-kran-2">loading</span>
+              </td>
+              <td>
+              <button type="button" class="btn btn-info mb-2" id="status-btn-kran-2" onclick="updateKeran('keran-2')"
+                style="border-radius: 25px;">loading</button>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>
+                <h6>3</h5>
+              </td>
+              <td>
+                <p class="fw-normal mb-1">Kran 3</p>
+              </td>
+              <td>
+                <span class="badge bg-info" id="status-kran-3">loading</span>
+              </td>
+              <td>
+              <button type="button" class="btn btn-info mb-2" id="status-btn-kran-3" onclick="updateKeran('keran-3')"
+                style="border-radius: 25px;">loading</button>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>
+                <h6>4</h5>
+              </td>
+              <td>
+                <p class="fw-normal mb-1">Kran 4</p>
+              </td>
+              <td>
+                <span class="badge bg-info" id="status-kran-4">loading</span>
+              </td>
+              <td>
+              <button type="button" class="btn btn-info mb-2" id="status-btn-kran-4" onclick="updateKeran('keran-4')"
+                style="border-radius: 25px;">loading</button>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>
+                <h6>5</h5>
+              </td>
+              <td>
+                <p class="fw-normal mb-1">Kran 5</p>
+              </td>
+              <td>
+                <span class="badge bg-info" id="status-kran-5">loading</span>
+              </td>
+              <td>
+              <button type="button" class="btn btn-info mb-2" id="status-btn-kran-5" onclick="updateKeran('keran-5')"
+                style="border-radius: 25px;">loading</button>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>
+                <h6>6</h5>
+              </td>
+              <td>
+                <p class="fw-normal mb-1">Kran 6</p>
+              </td>
+              <td>
+                <span class="badge bg-info" id="status-kran-6">loading</span>
+              </td>
+              <td>
+              <button type="button" class="btn btn-info mb-2" id="status-btn-kran-6" onclick="updateKeran('keran-6')"
+                style="border-radius: 25px;">loading</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="card " style="border-radius: 50px;">
+      <div class="card-body p-4">
+      <canvas id="chart-bar"></canvas>
+      </div>
+    
+    </div>
+
+
+    <!--//app-card-->
+  </div>
+
+  <footer class="app-footer">
+    <div class="container text-center py-3">
+      <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+      <small class="copyright">Made With <span class="sr-only">love</span><i class="fas fa-heart"
+          style="color: #fb866a;"></i> by <a class="app-link" href="http://themes.3rdwavemedia.com"
+          target="_blank">Chilee
+          IoT Developers
+
+    </div>
+  </footer>
+</div>
+
+<!--//app-card-body-->
+
+{% block script %}
+<!-- realtime -->
+<script type="module" src="{{ url_for('static', filename = 'js/realtime-status-sistem.js') }}"></script>
+<!-- Charts JS -->
+<script src="{{ url_for('static', filename = 'plugins/chart.js/chart.min.js') }}"></script>
+<!-- <script src="{{ url_for('static', filename = 'js/function-sistem.js') }}"></script> -->
+{% endblock %}
+
+{% endblock %}

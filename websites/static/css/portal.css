@@ -13971,3 +13971,35 @@ button.close:focus {
     width: 100%
   }
 }
+
+/* animation */
+.hidden-down {
+  opacity: 0;
+  transition: all 1.5s;
+  filter: blur(5px);
+  transform: translateY(-100%);
+}
+.hidden-left {
+  opacity: 0;
+  transition: all 1.5s;
+  filter: blur(10px);
+  transform: translate(-100%);
+  /* transform: translate(-100%); */
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0);
+}
+
+/* animation multiple element */
+.blok:nth-child(2){ 
+  transition-delay: 200ms; 
+}
+.blok:nth-child(3){
+  transition-delay: 400ms;
+}
+.blok:nth-child(4){
+  transition-delay: 600ms;
+}
