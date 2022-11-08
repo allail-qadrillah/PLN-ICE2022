@@ -24,7 +24,7 @@ def updateCabai():
         })
         return redirect(url_for('views.stok'))
 
-@views.route('/updatePupuk', methods=['POST', 'GET'])
+@views.route('/updatePupuk', methods=['POST', 'GET']) 
 def updatePupuk():  
     if request.method == 'POST':
         pupuk = request.form['pupuk']

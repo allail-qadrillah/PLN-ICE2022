@@ -1,11 +1,11 @@
 // API call
 let queryUrl = "https://api.openweathermap.org/data/2.5/onecall?";
-let lat = "lat=5.5577&";
-let lon = "lon=95.3222&";
+let lat = "lat=5.521742&";
+let lon = "lon=95.436405&";
 let apiOptions = "units=metric&exclude=minutely,alerts&";
 let apiKey = "appid=e9185b28e9969fb7a300801eb026de9c";
 let file = queryUrl + lat + lon + apiOptions + apiKey;
-// let file = "https://api.openweathermap.org/data/2.5/onecall?lat=5.548290&lon=95.323753&units=metric&exclude=minutely,alerts&appid=e9185b28e9969fb7a300801eb026de9c";
+
 
 fetch(file)
   .then((response) => response.json())
@@ -16,7 +16,7 @@ fetch(file)
     let temp = Math.round(data.current.temp);
     let pressure = data.current.pressure;
     let humidity = data.current.humidity;
-    let name = "Banda Aceh";
+    let name = "<strong>Kebun Cabai</strong>";
 
     document.getElementById("wrapper-description").innerHTML = description;
     document.getElementById("wrapper-temp").innerHTML = temp + "°C";

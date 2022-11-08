@@ -30,8 +30,23 @@ onValue(ref(db, '/status/'), (snapshot) => {
   var status_selenoid_4  = (data['selenoid-pipe-4'] == true) ? change_selenoid_status("status-kran-4", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-4", 'Mati', 'badge bg-danger ');
   var status_selenoid_5  = (data['selenoid-pipe-5'] == true) ? change_selenoid_status("status-kran-5", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-5", 'Mati', 'badge bg-danger ');
   var status_selenoid_6  = (data['selenoid-pipe-6'] == true) ? change_selenoid_status("status-kran-6", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-6", 'Mati', 'badge bg-danger ');
+  var status_selenoid_7  = (data['selenoid-pipe-7'] == true) ? change_selenoid_status("status-kran-7", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-7", 'Mati', 'badge bg-danger ');
+  var status_selenoid_8  = (data['selenoid-pipe-8'] == true) ? change_selenoid_status("status-kran-8", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-8", 'Mati', 'badge bg-danger ');
+  var status_selenoid_9  = (data['selenoid-pipe-9'] == true) ? change_selenoid_status("status-kran-9", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-9", 'Mati', 'badge bg-danger ');
+  var status_selenoid_10  = (data['selenoid-pipe-10'] == true) ? change_selenoid_status("status-kran-10", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-10", 'Mati', 'badge bg-danger ');
+  var status_selenoid_11  = (data['selenoid-pipe-11'] == true) ? change_selenoid_status("status-kran-11", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-11", 'Mati', 'badge bg-danger ');
+  var status_selenoid_12  = (data['selenoid-pipe-12'] == true) ? change_selenoid_status("status-kran-12", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-12", 'Mati', 'badge bg-danger ');
+  var status_selenoid_13  = (data['selenoid-pipe-13'] == true) ? change_selenoid_status("status-kran-13", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-13", 'Mati', 'badge bg-danger ');
+  var status_selenoid_14  = (data['selenoid-pipe-14'] == true) ? change_selenoid_status("status-kran-14", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-14", 'Mati', 'badge bg-danger ');
+  var status_selenoid_15  = (data['selenoid-pipe-15'] == true) ? change_selenoid_status("status-kran-15", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-15", 'Mati', 'badge bg-danger ');
+  var status_selenoid_16  = (data['selenoid-pipe-16'] == true) ? change_selenoid_status("status-kran-16", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-16", 'Mati', 'badge bg-danger ');
+  var status_selenoid_17  = (data['selenoid-pipe-17'] == true) ? change_selenoid_status("status-kran-17", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-17", 'Mati', 'badge bg-danger ');
+  var status_selenoid_18  = (data['selenoid-pipe-18'] == true) ? change_selenoid_status("status-kran-18", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-18", 'Mati', 'badge bg-danger ');
+  var status_selenoid_19  = (data['selenoid-pipe-19'] == true) ? change_selenoid_status("status-kran-19", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-19", 'Mati', 'badge bg-danger ');
+  var status_selenoid_20  = (data['selenoid-pipe-20'] == true) ? change_selenoid_status("status-kran-20", 'Hidup', 'badge bg-success ') : change_selenoid_status("status-kran-20", 'Mati', 'badge bg-danger ');
   
 });
+
 onValue(ref(db, '/sensor/'), (snapshot) => {
   const data = snapshot.val();
   const tandon_air = data['ultrasonic']

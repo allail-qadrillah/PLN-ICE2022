@@ -42,7 +42,21 @@ onValue(ref(db, '/status/'), (snapshot) => {
   var status_selenoid_1 = (data['selenoid-pipe-4'] == true) ? change_text_class_selenoid("status-kran-4", 'Hidup', 'badge bg-success ', 'status-btn-kran-4', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-4", 'Mati', 'badge bg-danger ', 'status-btn-kran-4', 'Hidupkan', 'btn btn-success');
   var status_selenoid_1 = (data['selenoid-pipe-5'] == true) ? change_text_class_selenoid("status-kran-5", 'Hidup', 'badge bg-success ', 'status-btn-kran-5', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-5", 'Mati', 'badge bg-danger ', 'status-btn-kran-5', 'Hidupkan', 'btn btn-success');
   var status_selenoid_1 = (data['selenoid-pipe-6'] == true) ? change_text_class_selenoid("status-kran-6", 'Hidup', 'badge bg-success ', 'status-btn-kran-6', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-6", 'Mati', 'badge bg-danger ', 'status-btn-kran-6', 'Hidupkan', 'btn btn-success');
-
+  var status_selenoid_1 = (data['selenoid-pipe-7'] == true) ? change_text_class_selenoid("status-kran-7", 'Hidup', 'badge bg-success ', 'status-btn-kran-7', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-7", 'Mati', 'badge bg-danger ', 'status-btn-kran-7', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-8'] == true) ? change_text_class_selenoid("status-kran-8", 'Hidup', 'badge bg-success ', 'status-btn-kran-8', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-8", 'Mati', 'badge bg-danger ', 'status-btn-kran-8', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-9'] == true) ? change_text_class_selenoid("status-kran-9", 'Hidup', 'badge bg-success ', 'status-btn-kran-9', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-9", 'Mati', 'badge bg-danger ', 'status-btn-kran-9', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-10'] == true) ? change_text_class_selenoid("status-kran-10", 'Hidup', 'badge bg-success ', 'status-btn-kran-10', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-10", 'Mati', 'badge bg-danger ', 'status-btn-kran-10', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-11'] == true) ? change_text_class_selenoid("status-kran-11", 'Hidup', 'badge bg-success ', 'status-btn-kran-11', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-11", 'Mati', 'badge bg-danger ', 'status-btn-kran-11', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-12'] == true) ? change_text_class_selenoid("status-kran-12", 'Hidup', 'badge bg-success ', 'status-btn-kran-12', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-12", 'Mati', 'badge bg-danger ', 'status-btn-kran-12', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-13'] == true) ? change_text_class_selenoid("status-kran-13", 'Hidup', 'badge bg-success ', 'status-btn-kran-13', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-13", 'Mati', 'badge bg-danger ', 'status-btn-kran-13', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-14'] == true) ? change_text_class_selenoid("status-kran-14", 'Hidup', 'badge bg-success ', 'status-btn-kran-14', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-14", 'Mati', 'badge bg-danger ', 'status-btn-kran-14', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-15'] == true) ? change_text_class_selenoid("status-kran-15", 'Hidup', 'badge bg-success ', 'status-btn-kran-15', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-15", 'Mati', 'badge bg-danger ', 'status-btn-kran-15', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-16'] == true) ? change_text_class_selenoid("status-kran-16", 'Hidup', 'badge bg-success ', 'status-btn-kran-16', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-16", 'Mati', 'badge bg-danger ', 'status-btn-kran-16', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-17'] == true) ? change_text_class_selenoid("status-kran-17", 'Hidup', 'badge bg-success ', 'status-btn-kran-17', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-17", 'Mati', 'badge bg-danger ', 'status-btn-kran-17', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-18'] == true) ? change_text_class_selenoid("status-kran-18", 'Hidup', 'badge bg-success ', 'status-btn-kran-18', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-18", 'Mati', 'badge bg-danger ', 'status-btn-kran-18', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-19'] == true) ? change_text_class_selenoid("status-kran-19", 'Hidup', 'badge bg-success ', 'status-btn-kran-19', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-19", 'Mati', 'badge bg-danger ', 'status-btn-kran-19', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_1 = (data['selenoid-pipe-20'] == true) ? change_text_class_selenoid("status-kran-20", 'Hidup', 'badge bg-success ', 'status-btn-kran-20', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-20", 'Mati', 'badge bg-danger ', 'status-btn-kran-20', 'Hidupkan', 'btn btn-success');
+  
 });
 
 function updateBtnStatus(namaKeran) {
@@ -79,7 +93,35 @@ window.updateKeran = (keran) => {
     updateBtnStatus('selenoid-pipe-5')
   } else if (keran == "keran-6") {
     updateBtnStatus('selenoid-pipe-6')
-  }
+  }else if (keran == "keran-7") {
+    updateBtnStatus('selenoid-pipe-7')
+  } else if (keran == "keran-8") {
+    updateBtnStatus('selenoid-pipe-8')
+  } else if (keran == "keran-9") {
+    updateBtnStatus('selenoid-pipe-9')
+  } else if (keran == "keran-10") {
+    updateBtnStatus('selenoid-pipe-10')
+  } else if (keran == "keran-11") {
+    updateBtnStatus('selenoid-pipe-11')
+  } else if (keran == "keran-12") {
+    updateBtnStatus('selenoid-pipe-12')
+  } else if (keran == "keran-13") {
+    updateBtnStatus('selenoid-pipe-13')
+  } else if (keran == "keran-14") {
+    updateBtnStatus('selenoid-pipe-14')
+  } else if (keran == "keran-15") {
+    updateBtnStatus('selenoid-pipe-15')
+  } else if (keran == "keran-16") {
+    updateBtnStatus('selenoid-pipe-16')
+  } else if (keran == "keran-17") {
+    updateBtnStatus('selenoid-pipe-17')
+  } else if (keran == "keran-18") {
+    updateBtnStatus('selenoid-pipe-18')
+  } else if (keran == "keran-19") {
+    updateBtnStatus('selenoid-pipe-19')
+  } else if (keran == "keran-20") {
+    updateBtnStatus('selenoid-pipe-20')
+  } 
 };
 
 window.updatePompa = (pompa) => {
