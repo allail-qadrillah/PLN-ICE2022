@@ -36,6 +36,11 @@ onValue(ref(db, '/status/'), (snapshot) => {
   // change class css
   var status_pompa_lahan = (data['pompa-lahan'] == true) ? change_text_class("status-pompa-lahan-button", 'MATIKAN', 'btn btn-danger mt-2') : change_text_class("status-pompa-lahan-button", 'AKTIFKAN', 'btn btn-success mt-2');
 
+  // change text
+  var status_pompa_sumur = (data['pompa-sumur'] == true) ? document.getElementById('status-pompa-sumur').innerHTML = "<strong>Aktif</strong>" : document.getElementById('status-pompa-sumur').innerHTML = "<strong>Non Aktif</strong>";
+  // change class css
+  var status_pompa_sumur = (data['pompa-sumur'] == true) ? change_text_class("status-pompa-sumur-button", 'MATIKAN', 'btn btn-danger mt-2') : change_text_class("status-pompa-sumur-button", 'AKTIFKAN', 'btn btn-success mt-2');
+
   var status_selenoid_1 = (data['selenoid-pipe-1'] == true) ? change_text_class_selenoid("status-kran-1", 'Hidup', 'badge bg-success ', 'status-btn-kran-1', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-1", 'Mati', 'badge bg-danger ', 'status-btn-kran-1', 'Hidupkan', 'btn btn-success');
   var status_selenoid_1 = (data['selenoid-pipe-2'] == true) ? change_text_class_selenoid("status-kran-2", 'Hidup', 'badge bg-success ', 'status-btn-kran-2', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-2", 'Mati', 'badge bg-danger ', 'status-btn-kran-2', 'Hidupkan', 'btn btn-success');
   var status_selenoid_1 = (data['selenoid-pipe-3'] == true) ? change_text_class_selenoid("status-kran-3", 'Hidup', 'badge bg-success ', 'status-btn-kran-3', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-3", 'Mati', 'badge bg-danger ', 'status-btn-kran-3', 'Hidupkan', 'btn btn-success');
@@ -127,34 +132,15 @@ window.updateKeran = (keran) => {
 window.updatePompa = (pompa) => {
   if (pompa == "pompa-lahan") {
     updateBtnStatus('pompa-lahan')
+    console.log("1")
+  }
+  else if (pompa == "pompa-sumur") {
+    updateBtnStatus('pompa-sumur')
+    console.log("2")
   }
 }
 
 
-// Realtime update Sensor
-// get(ref(db, '/sensor/'), (snapshot) => {
-//   const data = snapshot.val();
-
-//   var soil_1 = data['soil-1']
-//   var soil_2 = data['soil-2']
-//   var soil_3 = data['soil-3']
-//   var soil_4 = data['soil-4']
-//   var soil_5 = data['soil-5']
-//   var soil_6 = data['soil-6']
-//   var soil_7 = data['soil-7']
-
-//   console.log(soil_1)
-
-// });
-var data = onValue(ref(db, '/sensor/'), (snapshot) => {
-  const data = snapshot.val();
-
-  var soil_1 = data['soil-1']
-  // console.log(soil_1)
-  return soil_1
-
-});
-console.log(data)
 
 
 'use strict';
@@ -167,6 +153,28 @@ window.chartColors = {
   text: '#252930',
   border: '#e7e9ed'
 };
+var data = onValue(ref(db, '/sensor/'), (snapshot) => {
+  const data = snapshot.val();
+
+  var soil_1 = data['soil-1']
+  // console.log(soil_1)
+  return soil_1
+
+});
+// console.log(data)
+
+
+function getSensorSoil(namaSensor){
+  get(ref(db, 'sensor/')).then((snapshot) => {
+    const data = snapshot.val()
+
+    console.log( data[namaSensor] )
+    return data[namaSensor]
+  })
+}
+
+console.log( getSensorSoil('soil_1') )
+// console.log( getSensorSoil('sensor_3'))
 
 
 // Chart.js Bar Chart Example 
@@ -174,7 +182,7 @@ var barChartConfig = {
   type: 'bar',
 
   data: {
-    labels: ['Soil 1', 'Soil 2', 'Soil 3', 'Soil 4', 'Soil 5', 'Soil 6', 'Soil 7'],
+    labels: ['Soil 1', 'Soil 2', 'Soil 3', 'Soil 4', 'Soil 5', 'Soil 6', 'Soil 7', 'Soil 8', 'Soil 9', 'Soil 10'],
     datasets: [{
       label: 'Tingkat Kelembaban💧',
       backgroundColor: window.chartColors.green,
@@ -182,13 +190,10 @@ var barChartConfig = {
       maxBarThickness: 16,
 
       data: [
-        23,
-        45,
-        76,
-        75,
-        62,
-        37,
-        83
+        // getSensorSoil('soil_1'),
+        data,
+        10
+
       ]
     }]
   },

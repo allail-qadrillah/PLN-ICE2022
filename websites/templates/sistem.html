@@ -15,9 +15,34 @@
               <div class="carousel-item active">
                 <div class="d-flex justify-content-between mb-4 pb-2">
                   <div>
-                    <h4 class="text-muted mb-0">Pompa</h4>
+                    <h4 class="text-muted mb-0">Pompa Lahan</h4>
                     <h2 class="display-4" id="status-pompa-lahan"><strong>loading</strong></h2>
                     <button type="button" class="btn btn-info mt-2" id="status-pompa-lahan-button" onclick="updatePompa('pompa-lahan')"
+                      style="border-radius: 25px;">loading</button>
+                  </div>
+                  <div>
+                    <img src="{{ url_for('static', filename = 'images/icons/pompa.png') }}" width="150px">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-12 mb-2">
+      <div class="card " style="border-radius: 50px;">
+        <div class="card-body p-4">
+          <div id="demo1" class="carousel slide" data-ride="carousel">
+            <!-- Carousel inner -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex justify-content-between mb-4 pb-2">
+                  <div>
+                    <h4 class="text-muted mb-0">Pompa Sumur</h4>
+                    <h2 class="display-4" id="status-pompa-sumur"><strong>loading</strong></h2>
+                    <button type="button" class="btn btn-info mt-2" id="status-pompa-sumur-button" onclick="updatePompa('pompa-sumur')"
                       style="border-radius: 25px;">loading</button>
                   </div>
                   <div>
