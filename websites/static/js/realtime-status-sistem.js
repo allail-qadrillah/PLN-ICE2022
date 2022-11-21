@@ -173,11 +173,8 @@ function getSensorSoil(namaSensor){
   })
 }
 
-console.log( getSensorSoil('soil_1') )
-// console.log( getSensorSoil('sensor_3'))
 
-
-// Chart.js Bar Chart Example 
+// Chart
 var barChartConfig = {
   type: 'bar',
 
@@ -191,8 +188,16 @@ var barChartConfig = {
 
       data: [
         // getSensorSoil('soil_1'),
-        data,
-        10
+        Math.floor(Math.random() * 100) + 1,
+        Math.floor(Math.random() * 100) + 1,
+        Math.floor(Math.random() * 100) + 1,
+        Math.floor(Math.random() * 100) + 1,
+        Math.floor(Math.random() * 100) + 1,
+        Math.floor(Math.random() * 100) + 1,
+        Math.floor(Math.random() * 100) + 1,
+        Math.floor(Math.random() * 100) + 1,
+        Math.floor(Math.random() * 100) + 1,
+        Math.floor(Math.random() * 100) + 1,
 
       ]
     }]
