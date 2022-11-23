@@ -3,7 +3,7 @@ from .models import get_data_dashboard, update_data
 
 views = Blueprint('views', __name__)
 
-@views.route('/dashboard')
+@views.route('/')
 def dashboard():  
     return render_template('dashboard.html', data = get_data_dashboard())
 

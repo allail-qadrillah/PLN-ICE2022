@@ -13,20 +13,18 @@ const firebaseApp = initializeApp({
 import { getDatabase, ref, onValue, update, get } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
 const db = getDatabase()
 
+// ubah class dan text
 function change_text_class(statusKran, textStatus, classNameStatus) {
   document.getElementById(statusKran).innerHTML = textStatus;
   document.getElementById(statusKran).className = classNameStatus;
 }
-
+// ubah class dan text selenoid
 function change_text_class_selenoid(statusKran, textStatus, classNameStatus, btnKran, textBtn, classNameBtn) {
   document.getElementById(statusKran).innerHTML = textStatus;
   document.getElementById(statusKran).className = classNameStatus;
   document.getElementById(btnKran).className = classNameBtn;
   document.getElementById(btnKran).innerHTML = textBtn;
 }
-
-// document.getElementById("status-btn-kran-1").innerHTML = ;
-// change_text_class("status-kran-1", 'Hidup', 'badge bg-success ', 'status-btn-kran-1', 'Matikan', 'btn btn-danger')
 
 // Realtime update Status 
 onValue(ref(db, '/status/'), (snapshot) => {
@@ -42,32 +40,32 @@ onValue(ref(db, '/status/'), (snapshot) => {
   var status_pompa_sumur = (data['pompa-sumur'] == true) ? change_text_class("status-pompa-sumur-button", 'MATIKAN', 'btn btn-danger mt-2') : change_text_class("status-pompa-sumur-button", 'AKTIFKAN', 'btn btn-success mt-2');
 
   var status_selenoid_1 = (data['selenoid-pipe-1'] == true) ? change_text_class_selenoid("status-kran-1", 'Hidup', 'badge bg-success ', 'status-btn-kran-1', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-1", 'Mati', 'badge bg-danger ', 'status-btn-kran-1', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-2'] == true) ? change_text_class_selenoid("status-kran-2", 'Hidup', 'badge bg-success ', 'status-btn-kran-2', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-2", 'Mati', 'badge bg-danger ', 'status-btn-kran-2', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-3'] == true) ? change_text_class_selenoid("status-kran-3", 'Hidup', 'badge bg-success ', 'status-btn-kran-3', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-3", 'Mati', 'badge bg-danger ', 'status-btn-kran-3', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-4'] == true) ? change_text_class_selenoid("status-kran-4", 'Hidup', 'badge bg-success ', 'status-btn-kran-4', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-4", 'Mati', 'badge bg-danger ', 'status-btn-kran-4', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-5'] == true) ? change_text_class_selenoid("status-kran-5", 'Hidup', 'badge bg-success ', 'status-btn-kran-5', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-5", 'Mati', 'badge bg-danger ', 'status-btn-kran-5', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-6'] == true) ? change_text_class_selenoid("status-kran-6", 'Hidup', 'badge bg-success ', 'status-btn-kran-6', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-6", 'Mati', 'badge bg-danger ', 'status-btn-kran-6', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-7'] == true) ? change_text_class_selenoid("status-kran-7", 'Hidup', 'badge bg-success ', 'status-btn-kran-7', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-7", 'Mati', 'badge bg-danger ', 'status-btn-kran-7', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-8'] == true) ? change_text_class_selenoid("status-kran-8", 'Hidup', 'badge bg-success ', 'status-btn-kran-8', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-8", 'Mati', 'badge bg-danger ', 'status-btn-kran-8', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-9'] == true) ? change_text_class_selenoid("status-kran-9", 'Hidup', 'badge bg-success ', 'status-btn-kran-9', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-9", 'Mati', 'badge bg-danger ', 'status-btn-kran-9', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-10'] == true) ? change_text_class_selenoid("status-kran-10", 'Hidup', 'badge bg-success ', 'status-btn-kran-10', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-10", 'Mati', 'badge bg-danger ', 'status-btn-kran-10', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-11'] == true) ? change_text_class_selenoid("status-kran-11", 'Hidup', 'badge bg-success ', 'status-btn-kran-11', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-11", 'Mati', 'badge bg-danger ', 'status-btn-kran-11', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-12'] == true) ? change_text_class_selenoid("status-kran-12", 'Hidup', 'badge bg-success ', 'status-btn-kran-12', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-12", 'Mati', 'badge bg-danger ', 'status-btn-kran-12', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-13'] == true) ? change_text_class_selenoid("status-kran-13", 'Hidup', 'badge bg-success ', 'status-btn-kran-13', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-13", 'Mati', 'badge bg-danger ', 'status-btn-kran-13', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-14'] == true) ? change_text_class_selenoid("status-kran-14", 'Hidup', 'badge bg-success ', 'status-btn-kran-14', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-14", 'Mati', 'badge bg-danger ', 'status-btn-kran-14', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-15'] == true) ? change_text_class_selenoid("status-kran-15", 'Hidup', 'badge bg-success ', 'status-btn-kran-15', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-15", 'Mati', 'badge bg-danger ', 'status-btn-kran-15', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-16'] == true) ? change_text_class_selenoid("status-kran-16", 'Hidup', 'badge bg-success ', 'status-btn-kran-16', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-16", 'Mati', 'badge bg-danger ', 'status-btn-kran-16', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-17'] == true) ? change_text_class_selenoid("status-kran-17", 'Hidup', 'badge bg-success ', 'status-btn-kran-17', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-17", 'Mati', 'badge bg-danger ', 'status-btn-kran-17', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-18'] == true) ? change_text_class_selenoid("status-kran-18", 'Hidup', 'badge bg-success ', 'status-btn-kran-18', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-18", 'Mati', 'badge bg-danger ', 'status-btn-kran-18', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-19'] == true) ? change_text_class_selenoid("status-kran-19", 'Hidup', 'badge bg-success ', 'status-btn-kran-19', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-19", 'Mati', 'badge bg-danger ', 'status-btn-kran-19', 'Hidupkan', 'btn btn-success');
-  var status_selenoid_1 = (data['selenoid-pipe-20'] == true) ? change_text_class_selenoid("status-kran-20", 'Hidup', 'badge bg-success ', 'status-btn-kran-20', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-20", 'Mati', 'badge bg-danger ', 'status-btn-kran-20', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_2 = (data['selenoid-pipe-2'] == true) ? change_text_class_selenoid("status-kran-2", 'Hidup', 'badge bg-success ', 'status-btn-kran-2', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-2", 'Mati', 'badge bg-danger ', 'status-btn-kran-2', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_3 = (data['selenoid-pipe-3'] == true) ? change_text_class_selenoid("status-kran-3", 'Hidup', 'badge bg-success ', 'status-btn-kran-3', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-3", 'Mati', 'badge bg-danger ', 'status-btn-kran-3', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_4 = (data['selenoid-pipe-4'] == true) ? change_text_class_selenoid("status-kran-4", 'Hidup', 'badge bg-success ', 'status-btn-kran-4', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-4", 'Mati', 'badge bg-danger ', 'status-btn-kran-4', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_5 = (data['selenoid-pipe-5'] == true) ? change_text_class_selenoid("status-kran-5", 'Hidup', 'badge bg-success ', 'status-btn-kran-5', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-5", 'Mati', 'badge bg-danger ', 'status-btn-kran-5', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_6 = (data['selenoid-pipe-6'] == true) ? change_text_class_selenoid("status-kran-6", 'Hidup', 'badge bg-success ', 'status-btn-kran-6', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-6", 'Mati', 'badge bg-danger ', 'status-btn-kran-6', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_7 = (data['selenoid-pipe-7'] == true) ? change_text_class_selenoid("status-kran-7", 'Hidup', 'badge bg-success ', 'status-btn-kran-7', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-7", 'Mati', 'badge bg-danger ', 'status-btn-kran-7', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_8 = (data['selenoid-pipe-8'] == true) ? change_text_class_selenoid("status-kran-8", 'Hidup', 'badge bg-success ', 'status-btn-kran-8', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-8", 'Mati', 'badge bg-danger ', 'status-btn-kran-8', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_9 = (data['selenoid-pipe-9'] == true) ? change_text_class_selenoid("status-kran-9", 'Hidup', 'badge bg-success ', 'status-btn-kran-9', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-9", 'Mati', 'badge bg-danger ', 'status-btn-kran-9', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_10 = (data['selenoid-pipe-10'] == true) ? change_text_class_selenoid("status-kran-10", 'Hidup', 'badge bg-success ', 'status-btn-kran-10', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-10", 'Mati', 'badge bg-danger ', 'status-btn-kran-10', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_11 = (data['selenoid-pipe-11'] == true) ? change_text_class_selenoid("status-kran-11", 'Hidup', 'badge bg-success ', 'status-btn-kran-11', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-11", 'Mati', 'badge bg-danger ', 'status-btn-kran-11', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_12 = (data['selenoid-pipe-12'] == true) ? change_text_class_selenoid("status-kran-12", 'Hidup', 'badge bg-success ', 'status-btn-kran-12', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-12", 'Mati', 'badge bg-danger ', 'status-btn-kran-12', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_13 = (data['selenoid-pipe-13'] == true) ? change_text_class_selenoid("status-kran-13", 'Hidup', 'badge bg-success ', 'status-btn-kran-13', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-13", 'Mati', 'badge bg-danger ', 'status-btn-kran-13', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_14 = (data['selenoid-pipe-14'] == true) ? change_text_class_selenoid("status-kran-14", 'Hidup', 'badge bg-success ', 'status-btn-kran-14', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-14", 'Mati', 'badge bg-danger ', 'status-btn-kran-14', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_15 = (data['selenoid-pipe-15'] == true) ? change_text_class_selenoid("status-kran-15", 'Hidup', 'badge bg-success ', 'status-btn-kran-15', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-15", 'Mati', 'badge bg-danger ', 'status-btn-kran-15', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_16 = (data['selenoid-pipe-16'] == true) ? change_text_class_selenoid("status-kran-16", 'Hidup', 'badge bg-success ', 'status-btn-kran-16', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-16", 'Mati', 'badge bg-danger ', 'status-btn-kran-16', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_17 = (data['selenoid-pipe-17'] == true) ? change_text_class_selenoid("status-kran-17", 'Hidup', 'badge bg-success ', 'status-btn-kran-17', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-17", 'Mati', 'badge bg-danger ', 'status-btn-kran-17', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_18 = (data['selenoid-pipe-18'] == true) ? change_text_class_selenoid("status-kran-18", 'Hidup', 'badge bg-success ', 'status-btn-kran-18', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-18", 'Mati', 'badge bg-danger ', 'status-btn-kran-18', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_19 = (data['selenoid-pipe-19'] == true) ? change_text_class_selenoid("status-kran-19", 'Hidup', 'badge bg-success ', 'status-btn-kran-19', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-19", 'Mati', 'badge bg-danger ', 'status-btn-kran-19', 'Hidupkan', 'btn btn-success');
+  var status_selenoid_20 = (data['selenoid-pipe-20'] == true) ? change_text_class_selenoid("status-kran-20", 'Hidup', 'badge bg-success ', 'status-btn-kran-20', 'Matikan', 'btn btn-danger') : change_text_class_selenoid("status-kran-20", 'Mati', 'badge bg-danger ', 'status-btn-kran-20', 'Hidupkan', 'btn btn-success');
   
 });
 
-function updateBtnStatus(namaKeran) {
-  /*dapatkan status btn sebelumnya
+/*  dapatkan status btn sebelumnya
     jika status btn True => Ubah jadi False
     jika status btn False => Ubah jadi True */
+function updateBtnStatus(namaKeran) {
   get(ref(db, 'status/')).then((snapshot) => {
     const status = snapshot.val()[namaKeran]
 
@@ -80,12 +78,11 @@ function updateBtnStatus(namaKeran) {
         [namaKeran]: true
       })
     }
-
   })
 }
 
+// Trigger klik Button Keran
 window.updateKeran = (keran) => {
-// update data keran
   if (keran == "keran-1") {
     updateBtnStatus('selenoid-pipe-1')
   } else if (keran == "keran-2") {
@@ -129,11 +126,33 @@ window.updateKeran = (keran) => {
   } 
 };
 
+
+
+// Trigger klik button pompa
 window.updatePompa = (pompa) => {
   if (pompa == "pompa-lahan") {
-    updateBtnStatus('pompa-lahan')
-    console.log("1")
+    get(ref(db, '/status/')).then((snapshot) => {
+
+      const status = snapshot.val()
+
+      // cek status selenoid
+      for (let index = 1; index <= 20; index++) {
+        const keran = status[`selenoid-pipe-${index}`]
+
+        // jika ada keran hidup  => hidupkan pompa
+        if (keran == true)  {
+          console.log('keran hidup')
+          updateBtnStatus('pompa-lahan')
+          break
+        // jika keran mati => jangan hidupkan pompa
+        } else {
+          console.log('keran mati smua')
+        }
+        
+      }
+    })
   }
+
   else if (pompa == "pompa-sumur") {
     updateBtnStatus('pompa-sumur')
     console.log("2")
@@ -144,9 +163,7 @@ window.updatePompa = (pompa) => {
 
 
 'use strict';
-
 /* Chart.js docs: https://www.chartjs.org/ */
-
 window.chartColors = {
   green: '#75c181',
   gray: '#a9b5c9',
