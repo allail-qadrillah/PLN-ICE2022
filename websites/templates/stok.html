@@ -1,0 +1,140 @@
+{% extends 'template.html' %}
+
+{% block title %} Stok📥 {% endblock %}
+
+{% block body %}
+<div class="app-wrapper">
+
+  <div class="app-content pt-3 p-md-3 p-lg-4">
+
+    <h1 class="app-page-title">Overviews </h1>
+    <div class="container-xl">
+      <div class="container py-1 h-100">
+        <!-- block stok -->
+        <div class="row g-4 mb-4">
+
+          <div class="blok hidden-right col-sm-4 col-md-4">
+            <div class="card  " style="border-radius: 25px;">
+              <div class="card-body p-4">
+                <div id="demo1" class="carousel slide" data-ride="carousel">
+                  <!-- Carousel inner -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="d-flex justify-content-between mb-4 pb-2">
+                        <div>
+                          <h5 class="text-muted mb-0">Cabai</h5>
+                          <h2 class="display-2"><strong>{{ data['gudang']['cabai'] }}kg</strong></h2>
+                        </div>
+
+                        <div class="fa-lg">
+                          <img src="{{ url_for('static', filename = 'images/icons/chili.png') }}" width="100px">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="blok hidden-right col-sm-4 col-md-4">
+            <div class="card" style="border-radius: 25px;">
+              <div class="card-body p-4">
+                <div id="demo1" class="carousel slide" data-ride="carousel">
+                  <!-- Carousel inner -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="d-flex justify-content-between mb-4 pb-2">
+                        <div>
+                          <h5 class="text-muted mb-0">Pupuk</h5>
+                          <h2 class="display-2"><strong>{{ data['gudang']['pupuk'] }}kg</strong></h2>
+                        </div>
+                        <div class="fa-lg">
+                          <img src="{{ url_for('static', filename = 'images/icons/fertilization.png') }}" width="100px">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="blok hidden-right col-sm-4 col-md-4">
+            <div class="card" style="border-radius: 25px;">
+              <div class="card-body p-4">
+                <div id="demo1" class="carousel slide" data-ride="carousel">
+                  <!-- Carousel inner -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="d-flex justify-content-between mb-4 pb-2">
+                        <div>
+                          <h5 class="text-muted mb-0">Bibit</h5>
+                          <h2 class="display-2"><strong>{{ data['gudang']['bibit'] }}kg</strong></h2>
+                        </div>
+                        <div>
+                          <img src="{{ url_for('static', filename = 'images/icons/seed.png') }}" width="100px">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hidden-down col-sm-12 col-lg-6">
+          <div class="card" style="border-radius: 25px;">
+            <div class="row card-body p-4">
+
+
+              <form action="{{ url_for('views.updateCabai') }}" method="POST">
+                <div class="form-outline col-12">
+                  <input type="number" name="cabai" id="typeNumber" class="form-control" />
+                  <label class="form-label" for="typeNumber">Berapa Kg Cabainya?</label>
+                </div>
+                <button type="submit" class="btn btn-success col-12 mt-2 mb-4 " style="border-radius: 10px;">Update
+                  Cabai🌶️</button>
+              </form>
+
+              <form action="{{ url_for('views.updatePupuk') }}" method="POST">
+                <div class="form-outline col-12">
+                  <input type="number" name="pupuk" id="typeNumber" class="form-control" />
+                  <label class="form-label" for="typeNumber">Berapa Kg Pupuknya?</label>
+                </div>
+                <button type="submit" class="btn btn-success col-12 mt-2 mb-4" style="border-radius: 10px;">Update Pupuk
+                  🧉</button>
+              </form>
+
+              <form action="{{ url_for('views.updateBibit') }}" method="post">
+                <div class="form-outline col-12">
+                  <input type="number" name="bibit" id="typeNumber" class="form-control" />
+                  <label class="form-label" for="typeNumber">Berapa Kg Bibitnya?</label>
+                </div>
+                <button type="submit" class="btn btn-success col-12 mt-2 mb-2" style="border-radius: 10px;">Update Bibit
+                  🌱</button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="app-footer">
+      <div class="container text-center py-3">
+        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+        <small class="copyright">Made With <span class="sr-only">love</span><i class="fas fa-heart"
+            style="color: #fb866a;"></i> by <a class="app-link" href="http://themes.3rdwavemedia.com"
+            target="_blank">Chilee IoT Developers
+
+      </div>
+    </footer>
+    <!--//app-footer-->
+
+  </div>
+  <!--//app-wrapper-->
+</div>
+{% endblock %}
