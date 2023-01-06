@@ -3,7 +3,7 @@ let queryUrl = "https://api.openweathermap.org/data/2.5/onecall?";
 let lat = "lat=5.521742&";
 let lon = "lon=95.436405&";
 let apiOptions = "units=metric&exclude=minutely,alerts&";
-let apiKey = "appid=e9185b28e9969fb7a300801eb026de9c";
+let apiKey = "";
 let file = queryUrl + lat + lon + apiOptions + apiKey;
 
 

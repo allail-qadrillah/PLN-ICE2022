@@ -1,13 +1,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
 const firebaseApp = initializeApp({
-  apiKey: "AIzaSyAxpoO18fyRIw-5P5mFFnpdSvxMkrZLkDM",
-  authDomain: "pln-ice.firebaseapp.com",
-  databaseURL: "https://pln-ice-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "pln-ice",
-  storageBucket: "pln-ice.appspot.com",
-  messagingSenderId: "274308576957",
-  appId: "1:274308576957:web:d3eae2bd42dc075687e9d4",
-  measurementId: "G-8ZLYWJWR36"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 });
 
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
