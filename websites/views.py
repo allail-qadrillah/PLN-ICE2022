@@ -6,6 +6,10 @@ views = Blueprint('views', __name__)
 @views.route('/')
 def dashboard():  
     return render_template('dashboard.html', data = get_data_dashboard())
+  
+@views.route('/api')
+def api():  
+    return "api"
 
 @views.route('/sistem')
 def sistem():  
