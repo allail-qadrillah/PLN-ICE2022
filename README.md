@@ -10,4 +10,5 @@
 ### Penghargaan
 ![Pengumuman Juara](https://user-images.githubusercontent.com/89723505/210974280-e4093f2a-2a2b-4fae-9ab2-22ebd0512834.jpg)
 ![USK POST](https://user-images.githubusercontent.com/89723505/210974559-7fbb6c38-a84f-48eb-b6ff-01ffc8613855.png)
-https://www.instagram.com/p/CmX6DQIyw-4/?igshid=MDJmNzVkMjY%3D
+Universitas Syiah Kuala Posst : https://www.instagram.com/p/CmX6DQIyw-4/?igshid=MDJmNzVkMjY%3D
+News Post : https://aceh.tribunnews.com/2022/11/25/mahasiswa-elektro-usk-kembangkan-penyiram-cabai-otomatis-berteknologi-iot-kontrol-pakai-smartphone
