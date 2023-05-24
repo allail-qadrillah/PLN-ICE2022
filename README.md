@@ -1,7 +1,8 @@
 # PLN-ICE2022
 
 ### Publikasi
-Universitas Syiah Kuala Post : https://www.instagram.com/p/CmX6DQIyw-4/?igshid=MDJmNzVkMjY%3D
+Universitas Syiah Kuala Post : https://www.instagram.com/p/CmX6DQIyw-4/
+
 News Post : https://aceh.tribunnews.com/2022/11/25/mahasiswa-elektro-usk-kembangkan-penyiram-cabai-otomatis-berteknologi-iot-kontrol-pakai-smartphone
 
 ### Penghargaan
