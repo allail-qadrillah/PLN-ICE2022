@@ -6,7 +6,7 @@ Universitas Syiah Kuala Post : https://www.instagram.com/p/CmX6DQIyw-4/
 News Post : https://aceh.tribunnews.com/2022/11/25/mahasiswa-elektro-usk-kembangkan-penyiram-cabai-otomatis-berteknologi-iot-kontrol-pakai-smartphone
 
 Video Laporan Tahap 1 : https://drive.google.com/file/d/1YC0fKzKwSb4ZO9Jqptr2aWNfMhYKE5VT/view?usp=sharing
-Video Laporan Akhur   : https://drive.google.com/file/d/1hto1_TnaLxnCbYfjQ23jDfEBDH72M3EJ/view?usp=sharing
+Video Laporan Akhir    : https://drive.google.com/file/d/1hto1_TnaLxnCbYfjQ23jDfEBDH72M3EJ/view?usp=sharing
 
 ### Penghargaan
 ![Pengumuman Juara](https://user-images.githubusercontent.com/89723505/210974280-e4093f2a-2a2b-4fae-9ab2-22ebd0512834.jpg)
